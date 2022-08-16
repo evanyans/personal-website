@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled, { ThemeProvider } from "styled-components"
-import { lightTheme, darkTheme, GlobalStyles } from './themes.js'
+import { lightTheme, darkTheme, GlobalStyles } from "../components/themes.js"
 import { Helmet } from "react-helmet"
 import Navbar from "../components/Navbar.js"
 import Header from "../components/Header.js"
