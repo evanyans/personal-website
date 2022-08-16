@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 import Toggle from 'react-toggle'
@@ -7,28 +7,33 @@ import "react-toggle/style.css"
 
 const Navbar = ({ themeToggle }) => {
 
-    const body = document.body;
-    let lastScroll = 0;
+    
+    useEffect(() => {
+        const body = document.body;
+        let lastScroll = 0;
 
-    window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll <= 0) {
-            body.classList.remove("scroll-up");
-            return;
-        }
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up");
+                return;
+            }
+    
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up");
+                body.classList.add("scroll-down");
+            } else if (
+                currentScroll < lastScroll &&
+                body.classList.contains("scroll-down")
+            ) {
+                body.classList.remove("scroll-down");
+                body.classList.add("scroll-up");
+            }
+            lastScroll = currentScroll;
+        });
+      }, []);
 
-        if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-            body.classList.remove("scroll-up");
-            body.classList.add("scroll-down");
-        } else if (
-            currentScroll < lastScroll &&
-            body.classList.contains("scroll-down")
-        ) {
-            body.classList.remove("scroll-down");
-            body.classList.add("scroll-up");
-        }
-        lastScroll = currentScroll;
-    });
+
 
 
     return (
