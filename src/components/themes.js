@@ -18,10 +18,16 @@ export const darkTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
+    html{
+        scroll-behavior: smooth;
+    }
+
+    *{
+        transition: all 0.2s ease-in-out;
+    }
     body {
         background-color: ${props => props.theme.body};
-        font-family: 'Roboto Mono', monospace;
-        
+        font-family: 'Roboto Mono', monospace;    
     }
 
     header{
@@ -54,10 +60,18 @@ export const GlobalStyles = createGlobalStyle`
         color: ${props => props.theme.title};
     }
 
+    ul{
+        color: ${props => props.theme.paragraph};
+        li span{
+            color:${props => props.theme.paragraph};
+        }
+    }
+
     /*Navbar Hide on Scroll*/
     .scroll-down {
 	    header {
 		    transform: translate3d(0, -100%, 0);
+           
 	    }
     }
 
@@ -69,7 +83,6 @@ export const GlobalStyles = createGlobalStyle`
 
     .menu-is-open {
 	    overflow: hidden;
-
 	    header {
 		    filter: none;
 	    }

@@ -6,19 +6,15 @@ import { BsFillMoonFill, BsSunFill } from 'react-icons/bs'
 import "react-toggle/style.css"
 
 const Navbar = ({ themeToggle }) => {
-
-    
+    let lastScroll = 0;
     useEffect(() => {
         const body = document.body;
-        let lastScroll = 0;
-
         window.addEventListener("scroll", () => {
             const currentScroll = window.pageYOffset;
             if (currentScroll <= 0) {
                 body.classList.remove("scroll-up");
                 return;
             }
-    
             if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
                 body.classList.remove("scroll-up");
                 body.classList.add("scroll-down");
@@ -32,9 +28,6 @@ const Navbar = ({ themeToggle }) => {
             lastScroll = currentScroll;
         });
       }, []);
-
-
-
 
     return (
         <Nav>
@@ -82,8 +75,6 @@ export const Wrapper = styled.header`
     padding:20px 44px;
     display:flex;
     justify-content:space-between;
-    transition: transform 0.2s ease-in-out;
-    transition: filter 0.2s ease-in-out;
 `
 
 export const Menu = styled.div`
@@ -100,7 +91,7 @@ export const NavLink = styled.button`
     background:none;
     padding: 12px 15px;
     border-radius:8px;
-
+    transition:none;
     &:hover{
         background:#2E2E2E;
         color:#EAEAEA;

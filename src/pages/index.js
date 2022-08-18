@@ -5,17 +5,18 @@ import { Helmet } from "react-helmet"
 import Navbar from "../components/Navbar.js"
 import Header from "../components/Header.js"
 import About from "../components/About.js"
+import Projects from "../components/Projects.js"
 
 const IndexPage = () => {
 
   const [theme, setTheme] = useState("dark");
 
   const themeToggle = () => {
-    theme == "light" ? setTheme("dark") : setTheme("light");
+    theme === "light" ? setTheme("dark") : setTheme("light");
   }
 
   return (
-    <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Helmet>
         <title>Evan Yan</title>
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <Header/>
       <Layout>
         <About/>
+        <Projects/>
       </Layout>
     </ThemeProvider>
   )
@@ -35,7 +37,7 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Layout = styled.div`
-  max-width:900px;
+  max-width:984px;
   margin-left:auto;
   margin-right:auto;
 `

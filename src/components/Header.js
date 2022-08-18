@@ -24,13 +24,13 @@ const Header = () => {
 export default Header
 
 export const Wrapper = styled.div`
-    max-width:1024px;
+    max-width:1100px;
     margin-left:auto;
     margin-right:auto;
 `
 
 export const Body = styled.div`
-    margin-top:32%;
+    margin-top:30%;
 `
 
 export const Title = styled.h1`
