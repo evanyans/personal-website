@@ -32,7 +32,7 @@ const Navbar = ({ themeToggle }) => {
     return (
         <Nav>
             <Wrapper>
-                <a href=".">
+                <a href="." className="logo">
                     <StaticImage
                         src="../images/logoey.png"
                         alt="logo"
@@ -75,30 +75,44 @@ export const Wrapper = styled.header`
     padding:20px 44px;
     display:flex;
     justify-content:space-between;
+    .logo{
+        flex-shrink:0;
+    }
+    @media only screen and (max-width: 600px) {
+            padding:20px 15px;
+            .logo{
+                align-self:center;
+                width:25px;
+                margin-right:8px;
+            }
+    }
 `
 
 export const Menu = styled.div`
     display:flex;
     flex-direction:row;
+    align-self:center;
     label{
-        margin-top:13px;
+        margin-top:7px;
         margin-left:13px;
     }
 `
 
 export const NavLink = styled.button`
+    
     border:none;
     background:none;
     padding: 12px 15px;
     border-radius:8px;
+    font-size:15px;
     transition:none;
     &:hover{
         background:#2E2E2E;
         color:#EAEAEA;
     }
 
-`
-
-export const Switch = styled.button`
+    @media only screen and (max-width: 600px) {
+            padding:10px 10px;
+    }
 
 `

@@ -23,7 +23,7 @@ const About = () => {
         <ul>
           <li><span>Typescript</span></li>
           <li><span>React</span></li>
-          <li><span>C#</span></li>
+          <li><span>Godot Engine</span></li>
         </ul>
         </Technologies>
       </Text>
@@ -38,6 +38,9 @@ export const Wrapper = styled.div`
   display:flex;
   flex-direction:row;
   margin-top:80px;
+  @media only screen and (max-width: 600px) {
+      flex-direction:column;
+    }
 `
 
 export const Text = styled.div`
@@ -96,7 +99,11 @@ export const Technologies = styled.div`
 `
 
 export const Photo = styled.div`
-
+  @media only screen and (max-width: 600px) {
+      text-align:center;
+      justify-content:center;
+      align-self:center;
+    }
 `
 export const Circle = styled.div`
   margin-top:113px;
@@ -104,5 +111,10 @@ export const Circle = styled.div`
   width:318px;
   background-color: #fff;
   border-radius: 50%;
+  @media only screen and (max-width: 600px) {
+      margin-top:30px;
+      height:250px;
+      width:250px;
+    }
 `
 

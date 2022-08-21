@@ -9,10 +9,10 @@ const Header = () => {
             <Wrapper>
                 <Body>
                     <Title>I'm <div className="gradient">Evan Yan</div> <br />Front-end developer</Title>
-                    <Description>currently seeking university admission and 2023 summer internship.</Description>
+                    <Description>currently seeking university admission</Description>
                     <Icons>
-                        <FaLinkedin fontSize="22px" className="icon" />
-                        <FaGithub fontSize="22px" className = "icon" />
+                        <a href="https://www.linkedin.com/in/yanevan" target="_blank"><FaLinkedin fontSize="22px" className="icon" /></a>
+                        <a href="https://github.com/evanyans" target="_blank"><FaGithub fontSize="22px" className = "icon" /></a>
                     </Icons>
                 </Body>
             </Wrapper>
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 `
 
 export const Body = styled.div`
-    margin-top:30%;
+    margin-top:25%;
 `
 
 export const Title = styled.h1`
@@ -55,12 +55,20 @@ export const Title = styled.h1`
 `
 export const Description = styled.p`
     font-size:20px;
+    @media only screen and (max-width: 600px) {
+            font-size:16px;
+    }
 `
 
 export const Icons = styled.div`
     margin-top:71px;
+    margin-left:-10px;
     display:flex;
     gap:34px;
+
+    @media only screen and (max-width: 600px) {
+            margin-top:50px;
+    }
 `
 
 export const Triangle = styled.div`

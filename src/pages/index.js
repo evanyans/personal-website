@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar.js"
 import Header from "../components/Header.js"
 import About from "../components/About.js"
 import Projects from "../components/Projects.js"
+import Contact from './../components/Contact';
+import Footer from "../components/Footer.js"
 
 const IndexPage = () => {
 
@@ -25,11 +27,15 @@ const IndexPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
       </Helmet>
       <Navbar themeToggle={themeToggle} />
-      <Header/>
-      <Layout>
-        <About/>
-        <Projects/>
-      </Layout>
+      <Margin>
+        <Header />
+        <Layout>
+          <About />
+          <Projects />
+          <Contact />
+        </Layout>
+      </Margin>
+      <Footer/>
     </ThemeProvider>
   )
 }
@@ -40,4 +46,9 @@ export const Layout = styled.div`
   max-width:984px;
   margin-left:auto;
   margin-right:auto;
+`
+
+export const Margin = styled.div`
+  margin-left:15px;
+  margin-right:15px;
 `
