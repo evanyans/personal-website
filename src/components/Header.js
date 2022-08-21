@@ -31,6 +31,9 @@ export const Wrapper = styled.div`
 
 export const Body = styled.div`
     margin-top:25%;
+    @media only screen and (max-width: 600px) {
+        padding-top:90px;
+    }
 `
 
 export const Title = styled.h1`
