@@ -130,8 +130,9 @@ export const GlobalStyles = createGlobalStyle`
         color: ${props => props.theme.title};
     }
 
-    input[type=submit]{
+    button[type=submit]{
         margin-top:1rem;
+        color:#191919;
         font-family: 'Roboto Mono', monospace;
         width:162px;
         font-size:16px;
