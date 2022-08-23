@@ -119,6 +119,16 @@ export const GlobalStyles = createGlobalStyle`
 
         color: ${props => props.theme.title};
     }
+    input[type=email]{
+        font-family: 'Roboto Mono', monospace;
+        font-size:14px;
+        background-color: ${props => props.theme.project};
+        border: solid 1px ${props => props.theme.projectOutline};
+        padding:10px 20px;
+        border-radius:5px;
+
+        color: ${props => props.theme.title};
+    }
 
     input[type=submit]{
         margin-top:1rem;

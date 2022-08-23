@@ -6,20 +6,31 @@ const Contact = () => {
         <Wrapper id="contact">
             <Title>contact.</Title>
             <Description>Get in touch or contact me directly at <b>evanyans@gmail.com</b></Description>
-            <Form>
+            <Form 
+            name="contact v1" 
+            method ="post" 
+            data-netlify="true" 
+            onSubmit="submit"
+            data-netlify-honeypot="bot-field">
+
+                <input type="hidden" name="contact" value="contact v1" />
+
+                <div hidden>
+                    <input name="bot-field" />
+                </div>
                 <div>
                     <label for="name" required>Your Name</label>
-                    <input type="text" placeholder="Your Name" required/>
+                    <input type="text" name ="name" placeholder="Your Name" required/>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" placeholder="you@company.com" required />
+                    <input id="email" type="email" name="email" placeholder="you@company.com" required />
                 </div>
                 <div>
                     <label for="message">Message</label>
-                    <textarea rows={11} placeholder="Enter your message here" required></textarea>
-                    <input type="submit" value="Send Message" />
+                    <textarea name="message" rows={11} placeholder="Enter your message here" required></textarea> 
                 </div>
+                <input type="submit" value="Send Message" />
             </Form>
         </Wrapper>
     )

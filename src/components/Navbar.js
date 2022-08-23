@@ -93,7 +93,7 @@ export const Menu = styled.div`
     flex-direction:row;
     align-self:center;
     label{
-        margin-top:7px;
+        margin-top:11px;
         margin-left:13px;
     }
 `

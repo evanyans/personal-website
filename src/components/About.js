@@ -10,7 +10,7 @@ const About = () => {
           Hello, my name is Evan. I enjoy building high-quality and intuitive web applications.
           Currently I'm working on improving my skills as a developer through personal projects and online courses.
           <br /><br />
-          I like to spend my free time binge-watching shows, learning new technologies, or working on my roguelike cooking game, <a className="link" href="">Mikelin</a>.
+          I like to spend my free time binge-watching shows, learning new technologies, or working on my roguelike cooking game, <a className="link" href="https://twitter.com/okeyevan" target="_blank">Mikelin</a>.
           <br /><br />
           Technologies I’ve worked with:
         </AboutText>
@@ -99,6 +99,7 @@ export const Technologies = styled.div`
 `
 
 export const Photo = styled.div`
+display:none;
   @media only screen and (max-width: 600px) {
       text-align:center;
       justify-content:center;

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaGithub } from 'react-icons/fa'
-
+import { FiExternalLink } from 'react-icons/fi'
+import { StaticImage } from "gatsby-plugin-image"
 const Projects = () => {
   return (
     <Wrapper id="projects">
@@ -9,7 +10,14 @@ const Projects = () => {
       <List>
         <a href="https://vancouver-charity-games.vercel.app/" target="_blank">
           <Card className="projects">
-            <Icon></Icon>
+            <Icon><StaticImage
+                        src="../images/vcg.png"
+                        placeholder="blurred"
+                        width={100}
+                        height={100}
+                        quality={90}
+                        style={{ borderRadius: '20px' }}
+                    /></Icon>
             <Info>
               <Title>Vancouver Charity Games</Title>
               <Description>Complete front-end build for a youth led non-profit organization
@@ -17,19 +25,27 @@ const Projects = () => {
               <Tech>React&nbsp; TypeScript&nbsp; styled-components</Tech>
               <Links>
               <a href="https://github.com/evanyans/vancouver-charity-games" target="_blank"><FaGithub fontSize={20} className="icon" /></a>
+              <a href="https://vancouver-charity-games.vercel.app/" target="_blank"><FiExternalLink fontSize={20} className="icon" /></a>
               </Links>
             </Info>
           </Card>
         </a>
-        <a href="https://vancouver-charity-games.vercel.app/" target="_blank">
+        <a href=".">
           <Card className="projects">
-            <Icon></Icon>
+            <Icon className="portfolio"><StaticImage
+                        src="../images/portfolio.png"
+                        placeholder="blurred"
+                        width={100}
+                        height={100}
+                        quality={90}
+                        style={{ borderRadius: '20px' }}
+                    /></Icon>
             <Info>
               <Title>Personal Website</Title>
               <Description>You viewing it right now.</Description>
               <Tech>Gatsby&nbsp; React&nbsp; Javascript&nbsp; styled-components</Tech>
               <Links>
-                <FaGithub fontSize={20} className="icon" />
+              <a href="https://github.com/evanyans/personal-website" target="_blank"><FaGithub fontSize={20} className="icon" /></a>
               </Links>
             </Info>
           </Card>
@@ -73,6 +89,9 @@ export const Card = styled.div`
       flex-direction:column;
       gap:1.5rem;
   }
+  .portfolio{
+    background-color:#1B1B1B;
+  }
 `
 
 export const Icon = styled.div`
@@ -83,6 +102,8 @@ export const Icon = styled.div`
   flex-shrink: 0;
 
   margin-top:5px;
+
+
   @media only screen and (max-width: 600px) {
       width:80px;
       height:80px;

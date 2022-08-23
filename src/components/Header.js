@@ -9,7 +9,7 @@ const Header = () => {
             <Wrapper>
                 <Body>
                     <Title>I'm <div className="gradient">Evan Yan</div> <br />Front-end developer</Title>
-                    <Description>currently seeking university admission</Description>
+                    <Description>currently seeking university admission and commission work</Description>
                     <Icons>
                         <a href="https://www.linkedin.com/in/yanevan" target="_blank"><FaLinkedin fontSize="22px" className="icon" /></a>
                         <a href="https://github.com/evanyans" target="_blank"><FaGithub fontSize="22px" className = "icon" /></a>
