@@ -6,7 +6,7 @@ const Contact = () => {
         <Wrapper id="contact">
             <Title>contact.</Title>
             <Description>Get in touch or contact me directly at <b>evanyans@gmail.com</b></Description>
-            <Form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+            <Form method="POST" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="contact" value="contact" />
                 <div>
